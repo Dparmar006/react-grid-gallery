@@ -1,4 +1,4 @@
-import { useRef, useCallback, useEffect, CSSProperties } from "react";
+import { useRef, useCallback, useEffect, useLayoutEffect, CSSProperties } from "react";
 
 const objectStyles: CSSProperties = {
   position: "absolute",
