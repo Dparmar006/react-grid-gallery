@@ -33,6 +33,13 @@ export const ResizeListener = ({
     }
   }, []);
 
+  useLayoutEffect(() => {
+    const obj = objectRef.current
+    if (obj && obj.contentDocument && obj.contentDocument.defaultView) {
+      _onResize()
+    }
+  }, [objectRef.current])
+
   useEffect(() => {
     return () => {
       const obj = objectRef.current;
